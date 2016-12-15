@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <!-- =========== bases =========== -->
+
+  <ThingDef ParentName="ResourceBase" Name="RD_ConcreteBase" Abstract="True">
+    <description>Default description for concrete base, please provide description to item</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/StoneBlocks</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Stone_Drop</soundInteract>
+    <soundDrop>Stone_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <statBases>
+      <MarketValue>1</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+  </ThingDef>
+
+  <!-- =========== Stone solids, chunks, and blocks =========== -->
+  
+  <ThingDef ParentName="RD_ConcreteBase">
+    <defName>RD_Aggregate</defName>
+    <label>aggregate mix</label>
+	<description>A mix of sand, gravel and crushed stone. Used to make concrete.</description>
+    <graphicData>
+      <texPath>Things/Item/Aggregate</texPath>
+    </graphicData>
+  </ThingDef>
+  
+  <ThingDef ParentName="RD_ConcreteBase">
+    <defName>RD_Cement</defName>
+    <label>cement</label>
+	<description>A binding agent, like sand but finer in consistency. Used to make concrete.</description>
+    <graphicData>
+      <texPath>Things/Item/Cement</texPath>
+    </graphicData>
+  </ThingDef>
+  
+  <ThingDef ParentName="RD_ConcreteBase">
+    <defName>RD_Rebar</defName>
+    <label>rebar</label>
+	<description>Strong metal rods. Used to reinforce concrete.</description>
+    <graphicData>
+      <texPath>Things/Item/Rebar</texPath>
+    </graphicData>
+  </ThingDef>
+
+</Defs>

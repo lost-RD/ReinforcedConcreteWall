@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Buildings>
+
+
+  <!--========================= Bases =============================-->
+
+  <ThingDef Name="BuildingBase" Abstract="True">
+    <category>Building</category>
+    <thingClass>Building</thingClass>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+  </ThingDef>
+
+  <!--========================= Walls =============================-->
+
+
+
+  <ThingDef ParentName="BuildingBase" Name="Wall">
+    <defName>RD_ConcreteWall</defName>
+    <label>concrete wall</label>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <description>An impassable concrete wall. Capable of holding up a roof.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/ConcreteWall</texPath>
+      <graphicClass>Graphic_Appearances</graphicClass>
+      <linkType>CornerFiller</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+        <edgeTop>Damage/Edge</edgeTop>
+        <edgeBot>Damage/Edge</edgeBot>
+        <edgeLeft>Damage/Edge</edgeLeft>
+        <edgeRight>Damage/Edge</edgeRight>
+      </damageData>
+    </graphicData>
+    <blueprintGraphicData>
+      <texPath>Things/Building/Linked/ConcreteWall_Blueprint_Atlas</texPath>
+    </blueprintGraphicData>
+    <uiIconPath>Things/Building/Linked/ConcreteWallSmooth_MenuIcon</uiIconPath>
+    <statBases>
+      <MaxHitPoints>5000</MaxHitPoints>
+      <WorkToMake>500</WorkToMake>
+      <Flammability>0.01</Flammability>
+    </statBases>
+    <costList>
+      <RD_Aggregate>5</RD_Aggregate>
+      <RD_Cement>1</RD_Cement>
+      <RD_Rebar>5</RD_Rebar>
+    </costList>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <blockWind>true</blockWind>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1</fillPercent>
+    <coversFloor>true</coversFloor>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <tickerType>Never</tickerType>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <holdsRoof>true</holdsRoof>
+    <designationCategory>Structure</designationCategory>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <blockLight>true</blockLight>
+    <building>
+      <isInert>true</isInert>
+      <ignoreNeedsPower>true</ignoreNeedsPower>
+    </building>
+    <damageMultipliers>
+      <li>
+        <damageDef>Bomb</damageDef>
+        <multiplier>2</multiplier>
+      </li>
+    </damageMultipliers>
+    <designationHotKey>Misc4</designationHotKey>
+    <researchPrerequisites>
+      <li>Smithing</li>
+	  <li>Stonecutting</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+</Buildings>

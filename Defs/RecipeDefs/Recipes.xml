@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RecipeDefs>
+
+  <RecipeDef>
+	<defName>RD_MakeAggregate</defName>
+	<label>make aggregate</label>
+	<description>Grinds rock chunks into aggregate mix.</description>
+	<jobString>Stonecutting.</jobString>
+	<workAmount>1600</workAmount>
+	<workSpeedStat>StonecuttingSpeed</workSpeedStat>
+	<workSkill>Crafting</workSkill>
+	<workSkillLearnFactor>0.25</workSkillLearnFactor>
+	<effectWorking>CutStone</effectWorking>
+	<soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+	<ingredients>
+		<li>
+			<filter>
+				<categories>
+					<li>StoneChunks</li>
+				</categories>
+			</filter>
+			<count>1</count>
+		</li>
+	</ingredients>
+    <products>
+      <RD_Aggregate>50</RD_Aggregate>
+    </products>
+    <fixedIngredientFilter>
+		<categories>
+			<li>StoneChunks</li>
+		</categories>
+	</fixedIngredientFilter>
+	<recipeUsers>
+		<li>TableStonecutter</li>
+	</recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef>
+	<defName>RD_MakeCementFromChunks</defName>
+	<label>make cement from chunks</label>
+	<description>Grinds limestone into cement.</description>
+	<jobString>Stonecutting.</jobString>
+	<workAmount>1600</workAmount>
+	<workSpeedStat>StonecuttingSpeed</workSpeedStat>
+	<workSkill>Crafting</workSkill>
+	<workSkillLearnFactor>0.25</workSkillLearnFactor>
+	<effectWorking>CutStone</effectWorking>
+	<soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+	<ingredients>
+		<li>
+			<filter>
+				<categories>
+					<li>StoneChunks</li>
+				</categories>
+			</filter>
+			<count>1</count>
+		</li>
+	</ingredients>
+    <products>
+      <RD_Cement>20</RD_Cement>
+    </products>
+    <fixedIngredientFilter>
+		<thingDefs>
+			<li>ChunkLimestone</li>
+		</thingDefs>
+	</fixedIngredientFilter>
+	<recipeUsers>
+		<li>TableStonecutter</li>
+	</recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef>
+	<defName>RD_MakeCementFromBricks</defName>
+	<label>make cement from bricks</label>
+	<description>Grinds limestone bricks into cement.</description>
+	<jobString>Stonecutting.</jobString>
+	<workAmount>160</workAmount>
+	<workSpeedStat>StonecuttingSpeed</workSpeedStat>
+	<workSkill>Crafting</workSkill>
+	<workSkillLearnFactor>0.25</workSkillLearnFactor>
+	<effectWorking>CutStone</effectWorking>
+	<soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+	<ingredients>
+		<li>
+			<filter>
+				<categories>
+					<li>StoneBlocks</li>
+				</categories>
+			</filter>
+			<count>5</count>
+		</li>
+	</ingredients>
+    <products>
+      <RD_Cement>2</RD_Cement>
+    </products>
+    <fixedIngredientFilter>
+		<thingDefs>
+			<li>BlocksLimestone</li>
+		</thingDefs>
+	</fixedIngredientFilter>
+	<recipeUsers>
+		<li>TableStonecutter</li>
+	</recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>RD_MakeRebar</defName>
+    <label>make rebar</label>
+    <description>Use heat and strong electromagnets to shape steel into rebar.</description>
+    <jobString>Smelting rebar from metal.</jobString>
+    <workAmount>1600</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <products>
+      <RD_Rebar>100</RD_Rebar>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+	<recipeUsers>
+		<li>ElectricSmithy</li>
+		<li>FueledSmithy</li>
+	</recipeUsers>
+  </RecipeDef>
+
+</RecipeDefs>
