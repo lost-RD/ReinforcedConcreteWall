@@ -3,11 +3,11 @@
 
     <name>RD - Reinforced Concrete Wall</name>
 
-    <author>Lost_RD</author>
+    <author>lost_RD</author>
 
     <url></url>
 
-    <targetVersion>0.15.1284</targetVersion>
+    <targetVersion>0.16.1393</targetVersion>
 
     <description>Introduces reinforced concrete walls which are much stronger than normal walls (5000hp) and very fire-resistant. Adds aggregate and cement (made at stonecutters table) and rebar (made at smithy). Must research stonecutting and smithing.</description>
 
